@@ -1,0 +1,25 @@
+import { print } from "introcs";
+
+class Foo {
+    n: number = 0;
+}
+
+export let main = async() => {
+    let n = 10;
+    let a = [20];
+    let o = new Foo();
+    o.n = 30;
+
+    fun(n, a, o);
+
+    print(n + " " + a[0] + " " + o.n);
+};
+
+let fun = (n: number, a: number[], o: Foo): void => {
+    n = n * 2;
+    a[0] = a[0] * 2;
+    o.n = o.n * 2;
+    print(n + " " + a[0] + " " + o.n);
+};
+
+main();
